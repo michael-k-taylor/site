@@ -1,14 +1,304 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.block-number {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8125em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #191919;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.block-number:hover {
+  opacity: 1;
+}
+
+.block-number::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  margin-bottom: 2px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid #191919;
+}
+
+.block-number a:hover,
+.block-number a:focus {
+  color: #191919;
+}
+
+.navbar {
+  position: absolute !important;
+  top: 0;
+  background-color: #25282D;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.demo-section .main-content .section,
+.demo-topbar .main-content .topbar,
+.demo-navbar .main-content .navbar,
+.demo-header .main-content .header,
+.demo-footer .main-content .footer {
+  margin: 30px 20px 100px;
+  border: 1px solid #f5f6f7;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.demo-topbar .main-content .topbar,
+.demo-navbar .main-content .navbar {
+  position: static;
+  margin: 0;
+}
+
+// Navbar
+.navbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  -webkit-transition: background-color .3s ease-out, -webkit-transform .3s ease-out;
+  transition: background-color .3s ease-out, -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out, background-color .3s ease-out;
+  transition: transform .3s ease-out, background-color .3s ease-out, -webkit-transform .3s ease-out;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 56px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+  }
+  .navbar {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+  }
+}
+
+.nav-navbar {
+  position: relative;
+}
+
+.mr-auto, .mx-auto {
+  margin-right: auto !important;
+}
+
+.nav {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar-light .nav-navbar > .nav-item.active > .nav-link, .navbar-light .nav-navbar > .nav-item > .nav-link.active, .navbar-light .nav-navbar > .nav-link.active, .navbar-stick-light.stick .nav-navbar > .nav-item.active > .nav-link, .navbar-stick-light.stick .nav-navbar > .nav-item > .nav-link.active, .navbar-stick-light.stick .nav-navbar > .nav-link.active {
+  color: #fff;
+}
+
+.navbar-light .nav-navbar > .nav-item > .nav-link, .navbar-light .nav-navbar > .nav-link, .navbar-stick-light.stick .nav-navbar > .nav-item > .nav-link, .navbar-stick-light.stick .nav-navbar > .nav-link {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.nav-navbar .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.87em;
+  word-spacing: 2px;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+}
+
+.nav-navbar > .nav-item > .nav-link, .nav-navbar > .nav-link {
+  line-height: 56px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-link.active, .nav-item.show .nav-link {
+  color: #50a1ff;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link {
+  color: #757575;
+  font-weight: 400;
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+}
+
+.navbar-mobile {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-light .logo-dark, .navbar-stick-light.stick .logo-dark {
+    display: none;
+}
+
+.mb-8, .my-8 {
+    margin-bottom: 5rem !important;
+}
+
+.mt-5, .my-5 {
+    margin-top: 1.5rem !important;
+}
+
+.navbar-brand img {
+    vertical-align: baseline;
+}
+
+// Header
+.header.h-fullscreen {
+  padding-top: 90px;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-lg-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-white {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.h-fullscreen, .h-100vh {
+  height: 100vh !important;
+}
+
+.header {
+  position: relative;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 146px;
+  padding-bottom: 90px;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-lg-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+.align-items-center {
+    -webkit-box-align: center !important;
+    align-items: center !important;
+}
+.row {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.header>.container, .header>.container-fluid {
+    position: relative;
+    height: 100%;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+@media (min-width: 992px) {
+  .col-lg-5 {
+    -webkit-box-flex: 0;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+}
+
+.text-white p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.gap-xy, .gap-xy-3 {
+    margin: -8px;
+}
+
+.constellation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+// Section
+.section-header {
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto 70px;
+}
+
+.section-header p.lead, .section-header .pricing-4 .plan-price p, .pricing-4 .plan-price .section-header p {
+  font-size: 1.125rem;
+}
+
+// Footer
+footer {
+    padding: 1.25rem 0;
+    border-top: 1px solid #f1f2f3;
 }

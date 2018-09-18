@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
+});
+
+
+Route::get('/blank', function () {
+    return view('pages.blank');
 });
